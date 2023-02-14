@@ -1,0 +1,18 @@
+import { FuncionarioAssumeRepo } from '../repository/funcionario-assume-repository';
+
+export class FuncionarioConsultaUseCase {
+    constructor (private repo: FuncionarioAssumeRepo) {}
+
+    async perform(params: FuncionarioConsultaUseCase.Params) : Promise<FuncionarioConsultaUseCase.Result>
+    {
+        return 'sucesso'
+    }
+}
+
+export namespace FuncionarioConsultaUseCase{
+    export type Params = {
+        id: string,
+        list: Array<object>
+    }
+    export type Result = string
+}
